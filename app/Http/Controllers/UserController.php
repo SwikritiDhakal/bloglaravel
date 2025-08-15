@@ -43,4 +43,10 @@ echo"No view found";
 }
 }
 
+function getUsers(){
+    $name= "swikriti";
+    return view('contact',['user'=>$name]);
+
+
+}
 }
