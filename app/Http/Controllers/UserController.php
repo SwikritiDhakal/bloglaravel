@@ -49,4 +49,14 @@ function getUsers(){
 
 
 }
+
+function getHeader(){
+    $page="header";
+    $name="sam";
+    $users=['swikriti','suks','suru'];
+
+    return view('common.header',['msg'=>"hii im in $page","user"=>$users,"name"=>$name]);
+}
+
+
 }

@@ -35,3 +35,5 @@ Route::get('/about/{name}',function($name){
 });
 
 Route::get('contact/{name}',[UserController::class, 'getContacts']);
+
+Route::get('common.header',[UserController::class,'getHeader']);
