@@ -4,6 +4,7 @@
 @include('common.navbar',["page"=>"this is home"])
 
 <x-message-banner msg="hii from home" type="success"/>
+<x-message-banner msg="hii from home" type="error"/>
 
 
 <br><br><br>
