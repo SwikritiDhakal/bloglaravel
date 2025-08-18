@@ -35,4 +35,27 @@ class UserrController extends Controller
     ]);
 
     }
+
+
+// function show(){
+//     // return view('home');
+// // return redirect()->to('home/profilr/user');
+// return to_route('hm');
+
+// }
+// function user(){
+//     // return view('home');
+// // return redirect()->to('home/profilr/user');
+// return to_route('user',["name"=>"suks"]);
+
+// }
+
+function show(){
+    return "student list";
+}
+
+function add(){
+    return "add new student";
+}
+
 }

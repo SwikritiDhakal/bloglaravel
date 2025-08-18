@@ -1,9 +1,12 @@
 <h1>home page</h1>
-<a href="/">Welcome</a>
+<!-- <a href="/">Welcome</a>
 <a href="/about/swikriti">About</a>
+<h3>{{URL::current()}}</h3> -->
+
+
 @include('common.navbar',["page"=>"this is home"])
 
-<x-message-banner msg="hii from home" type="success"/>
+<!-- <x-message-banner msg="hii from home" type="success"/>
 <x-message-banner msg="hii from home" type="error"/>
 
 
@@ -27,4 +30,4 @@
 
     
     
-</style>
+</style> -->
