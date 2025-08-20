@@ -4,12 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserrController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\PostController;
 use App\Http\Middleware\AgeCheck;
 use App\Http\Middleware\CountryCheck;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('post', PostController::class);
 
 Route::get('users',[StudentController::class,'users']);
 
