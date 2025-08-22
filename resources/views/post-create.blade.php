@@ -73,7 +73,16 @@
                             <td><img style="width:100px" src="{{asset('uploads/images/'.$post->image)}}" alt=""></td>
                             <td>{{$post->description}}</td>
                             <td><a href="{{route('post.edit',$post->id)}}">Edit</a></td>
-                            <td><a href="">Delete</a></td>
+                            
+                            <td>
+                                <form action="{{route('post.destroy',$post->id)}}" method="post">
+                                @csrf 
+                                @method('DELETE')
+                                <button class="btn btn-danger btn-sm type="submit">Delete</button>
+
+
+                                </form>
+                            </td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserrController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
 use App\Http\Middleware\AgeCheck;
 use App\Http\Middleware\CountryCheck;
 
@@ -13,6 +14,7 @@ Route::get('/', function () {
 });
 
 Route::resource('post', PostController::class);
+Route::resource('product', ProductController::class);
 
 Route::get('users',[StudentController::class,'users']);
 

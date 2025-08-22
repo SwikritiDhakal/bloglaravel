@@ -14,6 +14,7 @@
                 <div class="col-md-5">
                     <div class="card p-3">
                         <h2>Edit {{$post->title}}</h2>
+                       
                         <form action="{{route('post.update', $post->id)}}" method="post" enctype="multipart/form-data">
                         @csrf 
                         @method('PUT')

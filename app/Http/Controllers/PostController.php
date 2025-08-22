@@ -96,7 +96,7 @@ class PostController extends Controller
         }
 
         $post->update($data);
-        return redirect()->route('post-create')->with('post updated');
+        return redirect()->route('post.create')->with('success','post updated');
     }
 
     /**
@@ -104,6 +104,15 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        if($post->image){
+            $destination= 'uploads/images/'.$post->image;
+
+            if(\File::exists($destination)){
+                \File::delete($destination);
+            }
+
+            $post->delete();
+            return back()->with('success','deleted successfully');
+        }
     }
 }
